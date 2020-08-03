@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "bf236ad2-7e00-40a8-a023-630d1cf85b1d",
+		"name": "Sistema de Recordes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Erro Post dados 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3000/recorde",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"recorde"
+					]
+				},
+				"description": "Usuário envia um post sem dados."
+			},
+			"response": []
+		},
+		{
+			"name": "Erro Post  dados 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "João da Silva",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/recorde",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"recorde"
+					]
+				},
+				"description": "Usuário enviou algum dado, mas não enviou todos os dados requeridos."
+			},
+			"response": []
+		},
+		{
+			"name": "Post Accepted",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "João da Silva",
+							"type": "text"
+						},
+						{
+							"key": "recorde",
+							"value": "1000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/recorde",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"recorde"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/recorde/id/5f27015e53819f796c4b4067",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"recorde",
+						"id",
+						"5f27015e53819f796c4b4067"
+					]
+				},
+				"description": "Retorno de acordo com as especificações.Retorna o objeto omitindo as informações do token."
+			},
+			"response": []
+		},
+		{
+			"name": "Get token",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3000/recorde/id/token/7f1e25ea25f6be209f8010e4e1590da3fc2a88d9f4c233542d34560d656ca1cf1c763b757218d60fbca63bdf762ca6161a1245c14578a678ac175d7b339e6435",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"recorde",
+						"id",
+						"token",
+						"7f1e25ea25f6be209f8010e4e1590da3fc2a88d9f4c233542d34560d656ca1cf1c763b757218d60fbca63bdf762ca6161a1245c14578a678ac175d7b339e6435"
+					]
+				},
+				"description": "404 "
+			},
+			"response": []
+		},
+		{
+			"name": "Put erro dados 1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3000/recorde",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"recorde"
+					]
+				},
+				"description": "Usuário envia um put sem os campos requeridos"
+			},
+			"response": []
+		},
+		{
+			"name": "Put erro dados 2",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "João da Silva Neves",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/recorde",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"recorde"
+					]
+				},
+				"description": "Usuário envia um put faltando o preenchimento de algum dos campos requeridos"
+			},
+			"response": []
+		},
+		{
+			"name": "Put Sucess",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "João da Silva Neves",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "7f1e25ea25f6be209f8010e4e1590da3fc2a88d9f4c233542d34560d656ca1cf1c763b757218d60fbca63bdf762ca6161a1245c14578a678ac175d7b339e6435",
+							"type": "text"
+						},
+						{
+							"key": "recorde",
+							"value": "1500",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/recorde",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"recorde"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Recorde com valor menor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "João da Silva Neves",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "7f1e25ea25f6be209f8010e4e1590da3fc2a88d9f4c233542d34560d656ca1cf1c763b757218d60fbca63bdf762ca6161a1245c14578a678ac175d7b339e6435",
+							"type": "text"
+						},
+						{
+							"key": "recorde",
+							"value": "1000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/recorde",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"recorde"
+					]
+				},
+				"description": "Quando é executada a tentativa de atualização de um recorde com valor menor ao valor já existente o mesmo mantém o valor maior satisfazendo assim as especificações."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
